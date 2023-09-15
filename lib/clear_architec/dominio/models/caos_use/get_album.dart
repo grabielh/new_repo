@@ -8,7 +8,7 @@ class GetAlbumuseCase {
     return _albumGateway.getByID(id);
   }
 
-  Future<Future<Album>> getAll() async {
+  Future<List<Album>> getAll() async {
     return _albumGateway.getAll();
   }
 }

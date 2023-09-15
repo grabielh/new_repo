@@ -4,7 +4,7 @@ import 'package:consumo_api/clear_architec/infraestructura/helpers/common/base_a
 class  AlbumMapper implements BaseMapper <Album>{
   @override
   fromMap(Map<String, dynamic> json) =>  Album(
-    albumId: json['userId'],
+    albumId: json['albumId'],
     id: json['id'],
     title: json['title'],
     url: json['url'],

@@ -5,10 +5,10 @@ import 'package:consumo_api/clear_architec/dominio/models/album/albun.dart';
 import 'package:consumo_api/clear_architec/infraestructura/helpers/album/album_mapper.dart';
 import 'package:http/http.dart' as http;
 
-class AlbunApiDelay extends AlbumGateway {
+class AlbumApi extends AlbumGateway {
   final AlbumMapper _albumMapper = AlbumMapper();
   @override
-  Future<Album> getAll() async {
+  Future<List<Album>> getAll() async {
     throw UnimplementedError('No se a implementado este Metodo !!');
   }
 

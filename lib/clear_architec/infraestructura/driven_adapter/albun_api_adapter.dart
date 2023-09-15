@@ -9,7 +9,7 @@ import 'package:http/http.dart' as http;
 class AlbunApiDelay extends AlbumGateway {
   final AlbumMapper _albumMapper = AlbumMapper();
   @override
-  Future<Album> getAll() async {
+  Future<List<Album>> getAll() async {
     throw UnimplementedError('No se a implementado este Metodo !!');
   }
 

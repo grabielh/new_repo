@@ -5,7 +5,7 @@ class UsecaseConfig {
   late GetAlbumuseCase getAlbunCasouse;
   late AlbunApiDelay _albunApiDelay;
   UsecaseConfig() {
-    getAlbunCasouse = GetAlbumuseCase(_albunApiDelay);
     _albunApiDelay = AlbunApiDelay();
+    getAlbunCasouse = GetAlbumuseCase(_albunApiDelay);
   }
 }
