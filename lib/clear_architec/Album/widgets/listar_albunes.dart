@@ -1,5 +1,5 @@
-import 'package:consumo_api/clear_architec/config/config_use_case.dart';
-import 'package:consumo_api/clear_architec/dominio/models/album/albun.dart';
+import 'package:consumo_api/clear_architec/Album/config/config_use_case.dart';
+import 'package:consumo_api/clear_architec/Album/dominio/models/album/albun.dart';
 import 'package:flutter/material.dart';
 
 class ListarAlbunes extends StatefulWidget {

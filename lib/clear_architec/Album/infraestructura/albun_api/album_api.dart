@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:consumo_api/clear_architec/dominio/gateway/album_gateway.dart';
-import 'package:consumo_api/clear_architec/dominio/models/album/albun.dart';
-import 'package:consumo_api/clear_architec/infraestructura/helpers/album/album_mapper.dart';
+import 'package:consumo_api/clear_architec/Album/dominio/gateway/album_gateway.dart';
+import 'package:consumo_api/clear_architec/Album/dominio/models/album/albun.dart';
+import 'package:consumo_api/clear_architec/Album/infraestructura/helpers/album/album_mapper.dart';
 import 'package:http/http.dart' as http;
 
 class AlbumApi extends AlbumGateway {

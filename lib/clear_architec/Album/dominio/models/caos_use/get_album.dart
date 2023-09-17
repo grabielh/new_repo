@@ -1,5 +1,6 @@
-import 'package:consumo_api/clear_architec/dominio/gateway/album_gateway.dart';
-import 'package:consumo_api/clear_architec/dominio/models/album/albun.dart';
+
+import 'package:consumo_api/clear_architec/Album/dominio/gateway/album_gateway.dart';
+import 'package:consumo_api/clear_architec/Album/dominio/models/album/albun.dart';
 
 class GetAlbumuseCase {
   final AlbumGateway _albumGateway;

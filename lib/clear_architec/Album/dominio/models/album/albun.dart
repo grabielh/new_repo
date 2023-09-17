@@ -11,4 +11,5 @@ int albumId;
     String title;
     String url;
     String thumbnailUrl;
+
 }

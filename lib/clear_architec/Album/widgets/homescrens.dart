@@ -1,8 +1,9 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:consumo_api/widgets/lista_album.dart';
-import 'package:consumo_api/widgets/listar_albunes.dart';
-import 'package:consumo_api/widgets/ruote_opciones.dart';
+
+import 'package:consumo_api/clear_architec/Album/widgets/lista_album.dart';
+import 'package:consumo_api/clear_architec/Album/widgets/listar_albunes.dart';
+import 'package:consumo_api/clear_architec/Album/widgets/ruote_opciones.dart';
 import 'package:flutter/material.dart';
 
 class HomeScrens extends StatefulWidget {

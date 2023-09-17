@@ -1,5 +1,6 @@
-import 'package:consumo_api/clear_architec/dominio/models/album/albun.dart';
-import 'package:consumo_api/clear_architec/infraestructura/helpers/common/base_album_mapper.dart';
+
+import 'package:consumo_api/clear_architec/Album/dominio/models/album/albun.dart';
+import 'package:consumo_api/clear_architec/Album/infraestructura/helpers/common/base_album_mapper.dart';
 
 class  AlbumMapper implements BaseMapper <Album>{
   @override

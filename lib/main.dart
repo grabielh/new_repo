@@ -1,4 +1,4 @@
-import 'package:consumo_api/widgets/homescrens.dart';
+import 'package:consumo_api/clear_architec/Album/widgets/homescrens.dart';
 import 'package:flutter/material.dart';
 
 void main() {

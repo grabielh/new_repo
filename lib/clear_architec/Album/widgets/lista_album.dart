@@ -1,5 +1,5 @@
-import 'package:consumo_api/clear_architec/config/config_use_case.dart';
-import 'package:consumo_api/clear_architec/dominio/models/album/albun.dart';
+import 'package:consumo_api/clear_architec/Album/config/config_use_case.dart';
+import 'package:consumo_api/clear_architec/Album/dominio/models/album/albun.dart';
 import 'package:flutter/material.dart';
 
 class ListarAlbum extends StatefulWidget {
@@ -11,23 +11,43 @@ class ListarAlbum extends StatefulWidget {
 
 class _ListarAlbumState extends State<ListarAlbum> {
   final UsecaseConfig _getAlbun = UsecaseConfig();
+  final TextEditingController buscarAlbun = TextEditingController();
+  List<Album> resultados = [];
+  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: TextField(
+          controller: buscarAlbun,
+          decoration: const InputDecoration(labelText: 'Buscar por ID'),
+          keyboardType: TextInputType.number,
+        ),
+        actions: [
+          IconButton(
+              onPressed: () async {
+                FocusScope.of(context).unfocus();
+              },
+              icon: const Icon(Icons.search))
+        ],
+      ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
               child: Padding(
-                  padding: const EdgeInsets.only(top: 50),
+                  padding: const EdgeInsets.only(top: 5),
                   child: FutureBuilder<Album>(
-                    future: _getAlbun.getAlbunCasouse.getAlbumID('5'),
+                    future:
+                        _getAlbun.getAlbunCasouse.getAlbumID(buscarAlbun.text),
                     builder: (context, snapshot) {
                       if (snapshot.connectionState == ConnectionState.waiting) {
                         return const CircularProgressIndicator();
                       } else if (snapshot.hasError) {
-                        return const Text('Error al obtener el álbum');
+                        return const Text(
+                            'Error al obtener el álbum ingrese ID');
                       } else if (!snapshot.hasData || snapshot.data == null) {
                         return const Text('No existe álbum');
                       } else {
@@ -45,7 +65,7 @@ class _ListarAlbumState extends State<ListarAlbum> {
                       }
                     },
                   )),
-            )
+            ),
           ],
         ),
       ),
